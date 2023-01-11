@@ -1,0 +1,69 @@
+$primary:#16A9E1;
+$secondary:rgba(12, 77, 140, 0.89);
+ @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+ 
+.bg-bleuFonce{
+    background-color: #0C4D8C;}
+.bg-primary{ background-color:$primary;}
+.btn-outline-success{background-color:rgba(12, 77, 140, 0.89);}
+.navbar-brand{
+    width: 15%;      
+}
+.btn{
+    color: white;
+}
+nav li{ 
+    display: inline-block; 
+    margin-right: 5%;
+    text-align: center; 
+     }  
+.icon{
+    font-size: 2rem; 
+    color: rgb(255, 255, 255);
+}
+
+.card-group {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  @keyframes taille {
+    from {
+      width: 0%;
+    }
+    50% {
+      width: 50%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+.image-carrousel{
+  @extend .d-block; 
+  @extend .w-100;
+}
+.links-modal a{
+  &:focus{color: red;}
+}

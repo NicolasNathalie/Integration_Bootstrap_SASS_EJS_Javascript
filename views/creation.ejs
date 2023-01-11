@@ -1,0 +1,187 @@
+<%- include('./partials/layout'); -%>
+    <%- include('./partials/ariane'); -%>
+        <%- include('./partials/navertical'); -%>
+            <div class=" col-10">
+                <h1 class="bg-danger fs-3 mt-1  m-5 text-center text-white">PROFIL</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-md-9">
+                        <form action="https://philippefleury.com/backend.php" method="post" name="creation">
+                            <fieldset class="w-100 m-4 border border-primary p-4">
+                                <legend>Entrez vos nom et adresse :</legend>
+                                <div class="mb-6">
+                                    <label for="prenom-nom" class="form-label">Prénom et nom :</label>
+                                    <input type="text" class="form-control" id="prenom-nom" name="prenom-nom"
+                                        placeholder="Prénom et nom" aria-label="Prénom et nom" required
+                                        pattern="^[A-Za-z\s-]{1,30}$">
+                                </div>
+                                <!-- Boutons radio -->
+                                <div class="form-check-inline">
+                                    <span class="me-2 d-inline-flex">Sexe :</span>
+                                    <div class="btn-group mx-5" role="group" aria-label="groupe de deux boutons">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                            autocomplete="off">
+                                        <label class="btn text-dark btn-outline-primary" for="btnradio1">Homme</label>
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                            autocomplete="off">
+                                        <label class="btn text-dark btn-outline-primary" for="btnradio2">Femme</label>
+                                    </div>
+                                    <div class="mb-6">
+                                        <label for="nom-entreprise" name="nom-entreprise" class="form-label">Nom de
+                                            l'entreprise :</label>
+                                        <input type="text" class="form-control" id="nom-entreprise"
+                                            name="nom-entreprise" placeholder="Nom de l'entreprise"
+                                            aria-label="Nom de l'entreprise" required>
+                                    </div>
+                                    <div class="mb-6">
+                                        <label for="rol/description" class="form-label "
+                                            name="rol/description">Rôle/Description :</label>
+                                        <input type="text" class="form-control" id="rol/description"
+                                            placeholder="Rôle/Description" name="rol/description"
+                                            aria-label="Rôle/Description" required>
+                                    </div>
+                                    <div class="mb-6">
+                                        <label for="adresse" class="form-label" name="adresse">Adresse :</label>
+                                        <input type="text" class="form-control" id="adresse" placeholder="Adresse"
+                                            name="adresse" aria-label="Adresse" required pattern="[A-Za-z0-9'\.\-\s\,]">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="ville" class="form-label" name="ville">Ville :</label>
+                                            <input type="text" class="form-control" placeholder="Ville"
+                                                aria-label="Ville" name="ville" required>
+                                        </div>
+                                        <div class="col">
+                                            <label for="province" class="form-label" name="province">Province :</label>
+                                            <input type="text" class="form-control" placeholder="Province"
+                                                aria-label="Province" name="province" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="code-postal" class="form-label" name="code-postal">Code Postal
+                                                :</label>
+                                            <input type="text" class="form-control" placeholder="Code Postal"
+                                                aria-label="Code Postal" name="code-postal" required
+                                                pattern="^[A-Z][0-9][A-Z][\s][0-9][A-Z][0-9]$">
+                                        </div>
+                                        <!-- Datalist -->
+                                        <div class="col">
+                                            <label for="DataListPays" class="form-label" name="pays1">Pays :</label>
+                                            <input class="form-control" list="datalistOptionsPays" id="DataListPays"
+                                                placeholder="Pays" name="pays1" required>
+                                            <datalist id="datalistOptionsPays">
+                                                <option value="CANADA">
+                                                <option value="ÉTATS-UNIS">
+                                            </datalist>
+                                        </div>
+                                    </div>
+                            </fieldset>
+                    </div>
+                    <div class="col-lg-4 col-md-9">
+                        <fieldset class="w-100 m-4 border border-primary p-4">
+                            <legend>Informations de contact :</legend>
+                            <div class="mb-6">
+                                <label for="site-web" class="form-label" name="site-web">Site web :</label>
+                                <input type="text" class="form-control" id="site-web" placeholder="Site web"
+                                    name="site-web" aria-label="Site web" required pattern="https://.*" size="30">
+                            </div>
+                            <div class="mb-6">
+                                <label for="courriel" class="form-label" name="courriel">Courriel :</label>
+                                <input type="text" class="form-control" id="courriel" placeholder="Courriel"
+                                    name="courriel" aria-label="Courriel" required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </div>
+                            <div class="mb-6">
+                                <label for="FormControlInput" class="form-label">Cellulaire :</label>
+                                <input type="text" class="form-control" id="FormControlInput" placeholder="Cellulaire"
+                                    aria-label="Cellulaire" required
+                                    pattern="^[0-9]{3}[\s][0-9]{3}[\s][0-9]{4}||([0-9]{3}[-]){2}[\d]{4}$">
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="telephone" class="form-label" name="telephone">Téléphone :</label>
+                                    <input type="text" class="form-control" placeholder="Téléphone"
+                                        aria-label="Téléphone" name="telephone" required
+                                        pattern="^[0-9]{3}[\s][0-9]{3}[\s][0-9]{4}||([0-9]{3}[-]){2}[\d]{4}$">
+                                </div>
+                                <div class="col">
+                                    <label for="fax" class="form-label" name="fax">Fax :</label>
+                                    <input type="text" class="form-control" placeholder="Fax" aria-label="Fax"
+                                        name="fax">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="info-complementaire" class="form-label"
+                                    name="info-complementaire">Informations complémentaires :</label>
+                                <textarea class="form-control" id="FormControlTextarea" rows="2"
+                                    name="info-complementaire" aria-label="Fax"></textarea>
+                            </div>
+                            <!-- Control file / help text-->
+                            <div class="mb-6">
+                                <label for="formFile" class="form-label">Ajouter une photo:</label>
+                                <input class="form-control mt-1" type="file" id="formFile"
+                                    aria-describedby="aideFormatFichier">
+                                <div id="aideFormatFichier" class="form-text mb-2">
+                                    Seul un format .jpg est accepté. Maximum 1MB
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- Groupe 3 boutons -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="btn-toolbar justify-content-center" role="toolbar"
+                                    aria-label="groupe de boutons">
+                                    <div class="btn-group" role="group">
+                                        <button aria-label="Création personnage" type="button"
+                                            class="btn text-dark btn-lumiere border-info me-1 mb-3"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="36" height="18"
+                                                fill="currentColor" class="bi bi-dice-4" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z" />
+                                                <path
+                                                    d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                            </svg>Créer</button>
+                                        <div class="btn-group " role="group">
+                                            <button aria-label="Réinitialiser" type="reset" value="Réinitialiser"
+                                                class="btn btn-primary  me-1 mb-3 ">Réinitialiser</button>
+                                            <div class="btn-group" role="group">
+                                                <button aria-label="Soumettre" type="submit" value="Soumettre"
+                                                    class="btn btn-primary mb-3">Soumettre</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <!-- Image -->
+                    <div class="col-lg-4 col-md-3">
+                        <div class="d-flex flex-column mx-5 align-items-center">
+                            <label for="DataList1" class="form-label">Choisissez la catégorie :</label>
+                        </div>
+                        <div class="d-flex  align-items-center justify-content-center ">
+                            <!-- Control color -->
+                            <input type="color" class="form-control form-control-color" id="ColorInput" value="#16A9E1"
+                                title="Choix de couleur">
+                            <input class="form-control w-50" list="datalistOptions1" id="DataList1"
+                                placeholder="Membre">
+                            <datalist id="datalistOptions1">
+                                <option value="Employé">
+                                <option value="Chef d'Entreprise">
+                                <option value="Auto entrepreneur">
+                                <option value="Retraité">
+                            </datalist>
+                        </div>
+                        <figure class="figure w-100 my-2">
+                            <img src="/images/employe.svg" class="figure-img img-fluid rounded" alt="Employé">
+                            <figcaption class="figure-caption text-center">EMPLOYÉ</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </main>
+
+            <%- include('./partials/footer'); -%>

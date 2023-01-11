@@ -1,0 +1,27 @@
+{
+  "name": "tp2",
+  "version": "1.0.0",
+  "description": "Sur le théme des impôts, application pour faciliter les démarches administratives et ficales",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass public/css/style.scss public/css/style.css --watch"
+  },
+  "author": "Viviana DIAZ RIVERA et Nathalie NICOLAS",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.1",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://integrationII@dev.azure.com/integrationII/TP2/_git/TP2"
+  },
+  "keywords": []
+}

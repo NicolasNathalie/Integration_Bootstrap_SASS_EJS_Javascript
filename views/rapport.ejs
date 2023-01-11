@@ -1,0 +1,119 @@
+<%- include('./partials/layout'); -%>
+  <%- include('./partials/ariane'); -%>
+    <%- include('./partials/navertical'); -%>
+      <div class=" col-10">
+        <div class="row">
+          <div class="col-12">
+            <button class="btn bg-secondary mt-1 m-5 text-center text-white">MES FACTURES</button>
+            <button class="btn bg-danger mt-1  m-5 text-center text-white">ÉTAT DE RÉSULTAT</button>
+            <button class="btn bg-secondary mt-1 m-5 text-center text-white">SOMMAIRE DES TAXES</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="col-6">
+            <form class=" m-4 border border-primary p-4">
+              <label for="DataListResult" class="form-label">Période</label>
+              <input class="form-control" list="datalistOptionsDate" id="DataListResult" placeholder="Période">
+              <datalist id="datalistOptionsDate">
+                <option value="2022">
+                <option value="2021">
+                <option value="2020">
+                <option value="2019">
+                <option value="2018">
+              </datalist>
+              <label for="FormControlInput" class="form-label">Du</label>
+              <input type="date" class="form-control" placeholder="Du" aria-label="dateFacture">
+              <label for="FormControlInput" class="form-label">Au</label>
+              <input type="date" class="form-control" placeholder="Au" aria-label="dateFacture">
+            </form>
+          </div>
+          <div class="col-6 shadow-lg p-3 mb-5 bg-body rounded row">
+            <h1>ÉTAT DE RÉSULTAT</h1>
+            <h2 class="fs-6">Du 1er janvier au 31 décembre 2021</h2>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold">REVENUS</span>
+              <span class="fw-bold">TOTAL NET</span>
+            </div>
+            <p class="fw-light">Sommes par catégories</p>
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Salaire</span>
+                <span>40 705,50</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                  style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Allocation familliale année 2021</span>
+                <span>6833,20</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                  style="width: 35%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold">TOTAL DES REVENUS</span>
+              <span>47 538,70</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <span class="fw-bold">DÉPENSES</span>
+              <span class="fw-bold">TOTAL NET</span>
+            </div>
+            <p class="fw-light">Sommes par catégories</p>
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Assurance auto/véhicule</span>
+                <span>230,50</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+                  style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Pharmacie</span>
+                <span>400,25</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+                  style="width: 25%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center ">
+              <span class="fw-bold">TOTAL DES DÉPENSES</span>
+              <span id="valeur">630,75</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center ">
+              <span class="fw-bold mt-4">RESULTAT NET</span>
+              <span id="resultat">Valeur: </span>
+            </div>
+            <input type="range" min="1" max="10000" value="500" class="form-range bg-primary " id="customRange">
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </main>
+
+
+
+
+      <script>
+        var slider = document.getElementById("customRange");
+        var output = document.getElementById("resultat");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+          output.innerHTML = this.value;
+        }
+      </script>
+
+
+      <%- include('./partials/footer'); -%>

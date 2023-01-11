@@ -1,0 +1,128 @@
+<%- include('./partials/layout'); -%>
+    <%- include('./partials/ariane'); -%>
+        <%- include('./partials/navertical'); -%>
+            <div class="col-10">
+                <!-- alert -->
+                <div class="alert alert-info text-center " role="alert">
+                    "Ceci est le membre par défaut"!
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <button class="btn bg-danger mt-1  m-5 text-center text-white">REVENUS</button>
+                    <button class="btn bg-secondary mt-1 m-5 text-center text-white">DÉPENSES</button>
+                    <span>
+                        <figure class=" my-2">
+                            <img src="/images/employe.svg" class="figure-img img-fluid rounded " alt="employé">
+                            <figcaption class="figure-caption">EMPLOYÉ</figcaption>
+                        </figure>
+                    </span>
+                </div>
+                <fieldset class="col-6 m-4 border border-primary p-4">
+                    <legend>Informations de la facture :</legend>
+                    <div>
+                        <label for="FormControlInput" class="form-label">Nom du client facturé</label>
+                        <input type="text" class="form-control" placeholder="Nom du client facturé"
+                            aria-label="clientFacture" required>
+                    </div>
+                    <div>
+                        <label for="FormControlInput" class="form-label">Numéro de facture</label>
+                        <input type="text" class="form-control" placeholder="Numéro de facture"
+                            aria-label="numéroFacture" required>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="FormControlInput" class="form-label">Date de la facture</label>
+                            <input type="date" class="form-control" placeholder="Date de la facture"
+                                aria-label="dateFacture" required>
+                        </div>
+                </fieldset>
+                <!-- ......TABLE ... -->
+                <section class="mt-5">
+                    <table class="table table-striped table-hover">
+                        <caption>Facture type (exemple)</caption>
+                        <thead>
+                            <tr>
+                                <td colspan=2 class="table-active">ÉTAT</td>
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">DESCRIPTION/PRODUIT</th>
+                                <th scope="col">QTE</th>
+                                <th scope="col">MONTANT UNITÉ</th>
+                                <th scope="col">MONTANT TOTAL</th>
+                                <th scope="col">CATÉGORIE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tee-shirt brodé</td>
+                                <td>2</td>
+                                <td>$22,70</td>
+                                <td>$45,40</td>
+                                <td>Ventes</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Pantalon en lin blanc</td>
+                                <td>1</td>
+                                <td>$42,50</td>
+                                <td>$42,50</td>
+                                <td>Ventes</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Pull jacquard bleu</td>
+                                <td>1</td>
+                                <td>$53,70</td>
+                                <td>$53,70</td>
+                                <td>Ventes</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Manteau trench coat</td>
+                                <td>1</td>
+                                <td>$119,90</td>
+                                <td>$119,90</td>
+                                <td>Ventes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group  mt-5">
+                            <span class="input-group-text" id="basic-addon1">Solde à payer : </span>
+                            <input type="text" class="form-control" placeholder="Paiement" aria-label="Paiement">
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text" id="basic-addon1">Échéance :</span>
+                            <input type="date" class="form-control" placeholder="date" aria-label="Échéance">
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="d-inline-flex mx-5   mt-5">
+                            <ul class="list-group">
+                                <li class="list-group-item  w-100">SOUS-TOTAL : 0.00</li>
+                                <li class="list-group-item mt-2">TPS/TVH : 0.00</li>
+                                <li class="list-group-item mt-2">TVQ : 0.00</li>
+                                <li class="list-group-item mt-2 mb-2">TOTAL : 0.00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-inline-flex justify-content-evenly mt-5">
+                            <label for="FormControlInput" class="d-inline-flex form-label">Paiement :</label>
+                            <input type="text" class="form-control w-25" placeholder="0.00" aria-label="Paiement">
+                        </div>
+                        <div class="d-inline-flex justify-content-evenly mt-3">
+                            <label for="FormControlInput" class="d-inline-flex form-label">Solde dû :</label>
+                            <input type="text" class="form-control w-25" placeholder="0.00" aria-label="solde dû">
+                        </div>
+                        <button class="btn bg-danger mt-3  m-5 text-center text-white">ENREGISTRER LA FACTURE</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </main>
+            <%- include('./partials/footer'); -%>

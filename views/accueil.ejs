@@ -1,0 +1,76 @@
+<%- include('./partials/layout'); -%>
+<%- include('./partials/navertical'); -%>
+<div class="col-sm-5 mt-5">
+  <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="carousel-item active">
+        <img src="images/personnages.png" class="image-carrousel" alt="feuille de revenu">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="badge bg-bleuFonce text-wrap">
+            <h1 class="text-white fs-6">Logiciel pour tous</h1>
+            <p class="text-white">Témoignage de personnes satisfaites.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/profil.png" class="image-carrousel" alt="feuille de dépense">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="badge bg-bleuFonce text-wrap">
+            <h1 class="text-white fs-6">Profil</h1>
+            <p class="text-white">Créer le profil de vos clients.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/rapport.png" class="image-carrousel" alt="rapport">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="badge bg-bleuFonce text-wrap">
+            <h1 class="text-white fs-6">Rapport</h1>
+            <p class="text-white">Présentation simplifiée d'un état de résultat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-bleuFonce rounded" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-bleuFonce rounded" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
+</div>
+<div class="col-sm-5">
+  <div class="m-5">
+    <p class="text-justify"> C’est un logiciel comptable, moderne et vraiment facile à utiliser. 
+      Il est idéal pour les travailleurs autonomes et les petites entreprises du Québec qui recherchent 
+      la simplicité et l'efficacité. Vous pouvez créer vos factures, les envoyer par courriel et vous faire payer, 
+      tout en comptabilisant vos dépenses ainsi que vos taxes.Vous pouvez avoir confiance en votre gestion comptable
+       du quotidien sans perdre l'option de collaborer avec votre
+      expert-comptable.<br><br>
+      La tenue de livre est simplifiée et facile à prendre en main.
+        En gardant comme objectif la simplicité, il est efficace et intuitif. Il reste facile à utiliser et excellent dans
+        les fonctions qu'il vous offre.<br><br>
+      Par exemple, ce logiciel est excellent pour :<br>
+      • Gérer vos factures de revenus et de dépenses.<br>
+      • Visualiser vos profits et pertes en tout temps.<br>
+      • Trouver facilement vos informations.<br>
+      • Suivre vos taxes à payer ou à recevoir dans le contexte unique du Québec.<br>
+      • Économiser en frais comptables reliés à la tenue de livres.</p>
+  </div>
+</div>
+</div>
+</div>
+</main>
+
+  
+  <%- include('./partials/footer'); -%>
